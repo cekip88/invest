@@ -1,3 +1,45 @@
 .section
 	+w($mobile)
 	margin: auto
+
+.head
+	+w(100%)
+	padding: 23px 0
+	background-color: color(var(--gray),.96)
+	position: fixed
+	&-burger
+		display: flex
+		align-items: center
+		&-button
+			&:before,&:after
+				+af
+			span,&:before,&:after
+				+bdrs(1.5px)
+				height: 3px
+				background-color: $white
+			&:before
+				+w(30px)
+			span
+				+w(21.5px)
+				margin: 4.5px 0
+				display: block
+			&:after
+				+w(13px)
+	&-logo
+		+dfc
+		&-link
+			max-width: 110px
+			display: block
+	&-nav
+		&-list
+			position: fixed
+		&-link
+	&-phone
+		&-link
+			+wh(36px)
+			+dfc
+			+bdrs(100%)
+			background-color: $blue-light
+			svg
+				path
+					stroke: $white

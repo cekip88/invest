@@ -1,11 +1,5 @@
 $unit: 'px'
-//
-	 Сетка 2.0
-	  m - мобильные колонки
-	  ml  - мобильные в развороте
-	  t   - планшетные
-	  tl  - планшетные в развороте
-	  d  -  десктопные
+
 .pallet
 	font-weight: 700
 	text-align: center
@@ -16,44 +10,46 @@ $unit: 'px'
 	display: flex
 	justify-content: flex-start
 	flex-wrap: wrap
-	
-$cols: 12
-$one_col: 100 / $cols
 
-$desktop: 1170px
-$depCoeff: 0.3 // 30px
-$colCoeff: 0.7 // 70px
+$mobile-grid: 320
+$mobile-large-grid: 480
+$tablet-grid: 768
+$tablet-large-grid: 1024
+$desktop-grid: 1170
+$desktop-large-grid: 1920
 
-$mobile: 320
-$mobile-large: 480
-$tablet: 768
-$tablet-large: 1024
-
-
-=grid($col_cnt,$letter,$full:null)
+=grid($col_cnt,$letter,$depCoeff,$colCoeff)
 	@for $i from 1 through $col_cnt
-		@if($full)
-			$one_full_col: ( 100% / ($desktop / 100) )
-			$one_col: $one_full_col - ($one_full_col * $depCoeff)
-			$one_dep: $one_full_col - ($one_full_col * $colCoeff)
-			#{$letter}#{$i}
-				width:  ($one_full_col * $i)
-			#{$letter}wd#{$i}
-				width: (($one_full_col) * $i) - $one_dep
-			#{$letter}wi#{$i}
-				width: (($one_full_col) * $i) - $one_col
-		@else
-			$one_full_col: (100% / $col_cnt)
-			#{$letter}#{$i}
-				width:  ($one_full_col * $i)
+		$coef: $colCoeff / $depCoeff
+		$one_dep: 100% / (($col_cnt * $coef) + ($col_cnt - 1))
+		$one_full_col: $one_dep * $coef + $one_dep
+		$one_col: $one_dep * $coef
+		#{$letter}#{$i}
+			width:  ($one_full_col * $i)
+		#{$letter}wd#{$i}
+			width: (($one_full_col) * $i) - $one_dep
+		#{$letter}wi#{$i}
+			width: (($one_full_col) * $i) - $one_col
 
-@media screen and (min-width: $mobile#{$unit})
-	+grid($cols,'.m')
-@media screen and (min-width: $mobile-large#{$unit})
-	+grid($cols,'.ml')
-@media screen and (min-width: $tablet#{$unit})
-	+grid($cols,'.t')
-@media screen and (min-width: $tablet-large#{$unit})
-	+grid($cols,'.tl')
-@media screen and (min-width: $desktop#{$unit})
-	+grid($cols,'.d','true')
+@media screen and (min-width: $mobile-grid#{$unit})
+	+grid(6,'.m',10,45)
+@media screen and (min-width: $mobile-large-grid#{$unit})
+	$colCoeff: 45
+	$depCoeff: 10
+	+grid(6,'.ml',$depCoeff,$colCoeff)
+@media screen and (min-width: $tablet-grid#{$unit})
+	$colCoeff: 79
+	$depCoeff: 19
+	+grid(8,'.t',$depCoeff,$colCoeff)
+@media screen and (min-width: $tablet-large-grid#{$unit})
+	$colCoeff: 83
+	$depCoeff: 19
+	+grid(10,'.tl',$depCoeff,$colCoeff)
+@media screen and (min-width: $desktop-grid#{$unit})
+	$colCoeff: 79
+	$depCoeff: 20
+	+grid(12,'.d',$depCoeff,$colCoeff)
+@media screen and (min-width: $desktop-large-grid#{$unit})
+	$colCoeff: 79
+	$depCoeff: 20
+	+grid(12,'.dl',$depCoeff,$colCoeff)

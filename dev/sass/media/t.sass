@@ -2,12 +2,42 @@
 	+w($tablet)
 
 .head
+	padding: 12px 0
 	&-burger
 		display: none
 	&-logo
-		&-link
+		justify-content: flex-start
 	&-nav
+		display: flex
+		align-items: center
 		&-list
+			position: static
+			height: initial
+			flex-direction: row
+			transform: none
 		&-link
-	&-phone
-		&-link
+			margin: 0 40px 0 0
+			&:last-child
+				margin: 0
+
+
+.button
+	&-blue
+	&-transparent
+
+main
+	margin-top: 60px
+
+.banner
+	padding-top: 86px
+	height: calc(513px - 60px)
+	&-inner
+		margin-left: auto
+	&-title
+		margin-bottom: 8px
+		font-size: 80px
+	&-desc
+		margin-bottom: 24px
+		font-size: 20px
+		line-height: 1.7
+	&-buttons

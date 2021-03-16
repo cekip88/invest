@@ -2,44 +2,117 @@
 	+w($mobile)
 	margin: auto
 
+
 .head
 	+w(100%)
 	padding: 23px 0
 	background-color: color(var(--gray),.96)
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16)
 	position: fixed
+	top: 0
+	z-index: 1000
 	&-burger
 		display: flex
 		align-items: center
 		&-button
-			&:before,&:after
-				+af
-			span,&:before,&:after
-				+bdrs(1.5px)
-				height: 3px
-				background-color: $white
-			&:before
-				+w(30px)
-			span
-				+w(21.5px)
-				margin: 4.5px 0
-				display: block
-			&:after
-				+w(13px)
+			+wh(30px,18px)
+			position: relative
+			img
+				position: absolute
+				left: 0
+				top: 0
+				transition: $transition
+				&:last-child
+					opacity: 0
 	&-logo
 		+dfc
 		&-link
-			max-width: 110px
+			max-width: 150px
 			display: block
 	&-nav
 		&-list
+			+dfc
+			height: calc(100% - 82px)
+			flex-direction: column
+			background-color: color(var(--gray),.8)
 			position: fixed
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 999
+			transform: translateX(100%)
+			transition: $transition
 		&-link
+			margin-bottom: 40px
+			font-family: $mcyrl700
+			color: $white
+			line-height: 16.8px
+			letter-spacing: .2em
+			text-transform: uppercase
+			&:last-child
+				margin-bottom: 0
 	&-phone
 		&-link
 			+wh(36px)
 			+dfc
 			+bdrs(100%)
+			margin-left: auto
 			background-color: $blue-light
 			svg
 				path
 					stroke: $white
+			span
+				display: none
+	&.active
+		.head
+			&-burger
+				&-button
+					img
+						&:last-child
+							opacity: 1
+						&:first-child
+							opacity: 0
+			&-nav
+				&-list
+					transform: none
+
+.button
+	+wh(142px,30px)
+	+bdrs(18px)
+	border: 3px solid transparent
+	color: $white
+	font-size: 11px
+	text-transform: uppercase
+	&-blue
+		background-color: $blue
+	&-transparent
+		border-color: $blue
+
+
+
+main
+	margin-top: 82px
+
+.banner
+	height: 460px
+	background-image: url("img/banner-bgc.jpg")
+	padding-top: 71px
+	&-title
+		margin-bottom: 52px
+		font-size: 38px
+		text-transform: uppercase
+		line-height: .95
+		letter-spacing: 0.15em
+		color: $white
+		font-family: $mcyrl900
+	&-desc
+		margin-bottom: 47px
+		color: $white
+		font-size: 18px
+		line-height: 30px
+		font-family: $mcyrl700
+	&-buttons
+		.button
+			&:first-child
+				margin-right: 10px
+

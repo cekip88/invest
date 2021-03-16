@@ -2,12 +2,45 @@
 	+w($tablet-large)
 
 .head
-	&-burger
-		&-button
 	&-logo
 		&-link
+			max-width: 185px
 	&-nav
-		&-list
-		&-link
+		justify-content: center
 	&-phone
+		display: flex
+		align-items: center
 		&-link
+			width: initial
+			height: initial
+			padding: 0
+			background-color: transparent
+			svg
+				margin-left: auto
+				margin-right: 10px
+				max-width: 14px
+				path
+					stroke: $blue
+			span
+				display: block
+				font-family: $mcyrl700
+				color: $white
+				line-height: 16.8px
+				letter-spacing: .2em
+				text-transform: uppercase
+
+
+
+
+main
+	margin-top: 66px
+
+.banner
+	height: calc(646px - 66px)
+	padding-top: 116px
+	&-title
+		margin-bottom: 26px
+		font-size: 106px
+	&-desc
+		margin-bottom: 43px
+		max-width: 596px

@@ -3,11 +3,15 @@
 @import "vars"
 $dpx: 14px
 $font_body: 14px
-//+font_inc($f_reg,'roboto-regular.ttf')
++font_inc($mcyrl100,'MuseoSansCyrl.otf')
++font_inc($mcyrl300,'MuseoSansCyrl_0.otf')
++font_inc($mcyrl500,'MuseoSansCyrl_1.otf')
++font_inc($mcyrl700,'MuseoSansCyrl_2.otf')
++font_inc($mcyrl900,'MuseoSansCyrl_3.otf')
 .set,body
 	+wh(100%)
 body
-	+font($font_body,$f_reg,$black)
+	+font($font_body,$mcyrl700,$black)
 	min-height: 100vh
 	overflow-x: hidden
 

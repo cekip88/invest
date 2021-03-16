@@ -14,6 +14,7 @@ class Front extends _front{
     _.selectAutoChoose();
     _.headScroll();
     _.textAnimation();
+    _.leadMap();
     window.addEventListener('scroll',function () {
       _.headScroll();
       _.textAnimation();
@@ -56,7 +57,6 @@ class Front extends _front{
   }
 
   headScroll(){
-    const _ = this;
     let head = document.querySelector('.head');
     if (window.pageYOffset > 132 && window.innerWidth > 1199){
       head.setAttribute('style','padding:20px 0;')
@@ -66,8 +66,8 @@ class Front extends _front{
   }
 
   textAnimation(){
-    const _ = this;
     let blocks = document.querySelectorAll('section');
+    if (!blocks.length) return;
     for (let block of blocks){
       if (window.pageYOffset + window.innerHeight - 150 >= block.offsetTop){
         if (!block.hasAttribute('data-animated')){
@@ -77,6 +77,11 @@ class Front extends _front{
         }
       }
     }
+  }
+
+  leadMap(){
+    let map = document.querySelector('.contacts-map iframe');
+    if (map) map.setAttribute('src','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.5649951409064!2d-74.30058058443582!3d40.285412371539124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3d3f7a3d2a35d%3A0x40b1f83007afe202!2zMjAwIENyYWlnIFJkLCBNYW5hbGFwYW4gVG93bnNoaXAsIE5KIDA3NzI2LCDQodCo0JA!5e0!3m2!1sru!2skz!4v1615911286891!5m2!1sru!2skz')
   }
 }
 new Front();

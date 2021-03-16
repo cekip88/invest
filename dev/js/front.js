@@ -1,4 +1,5 @@
 import { MainEventBus } from "./libs/MainEventBus.lib.js";
+import { gsap } from "./libs/GreenSock.lib.js";
 import { _front } from "./libs/_front.js";
 class Front extends _front{
   constructor(){
@@ -12,8 +13,10 @@ class Front extends _front{
 
     _.selectAutoChoose();
     _.headScroll();
+    _.textAnimation();
     window.addEventListener('scroll',function () {
-      _.headScroll()
+      _.headScroll();
+      _.textAnimation();
     })
   }
   createOrderSuccess(orderData){}
@@ -59,6 +62,20 @@ class Front extends _front{
       head.setAttribute('style','padding:20px 0;')
     } else {
       if (head.hasAttribute('style')) head.removeAttribute('style')
+    }
+  }
+
+  textAnimation(){
+    const _ = this;
+    let blocks = document.querySelectorAll('section');
+    for (let block of blocks){
+      if (window.pageYOffset + window.innerHeight - 150 >= block.offsetTop){
+        if (!block.hasAttribute('data-animated')){
+          block.setAttribute('data-animated',true);
+          let units = block.querySelectorAll('.animation');
+          gsap.to(units,{x:0,opacity:1,stagger:.3})
+        }
+      }
     }
   }
 }

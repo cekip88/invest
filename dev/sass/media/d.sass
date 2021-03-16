@@ -1,3 +1,105 @@
 .section
 	+w($desktop)
 
+.head
+	padding: 45px 0
+	&-logo-link
+		transition: $transition
+		&:hover
+			transform: scale(1.05)
+	&-phone-link
+		span
+			transition: $transition
+		&:hover
+			span
+				color: $blue
+	&-nav-link
+		transition: $transition
+		&:hover
+			color: $blue
+
+main
+	margin-top: 132px
+
+.title
+	font-size: 48px
+.block
+	padding-top: 111px
+.button
+	&-blue,&-transparent
+		transition: $transition
+	&-blue
+		&:hover
+			background-color: transparent
+			border-color: $blue
+			color: $blue
+	&-transparent
+		&:hover
+			background-color: $blue
+
+
+.banner
+	height: calc(892px - 132px)
+	padding-top: 174px
+	padding-bottom: 81px
+	&-inner
+		margin-left: 91px
+	&-title
+		margin-bottom: 53px
+	&-desc
+		margin-bottom: 99px
+
+
+.about
+	&-title
+		margin-bottom: 95px
+	&-logo
+		img
+			margin-bottom: 61px
+	&-text
+		font-size: 24px
+	&-img
+		width: 657px
+	&-call-link
+		&:hover
+			span
+				text-decoration: none
+
+
+.info
+	&-title
+		margin-bottom: -10px
+
+
+.vulcan
+	&-form
+		.form
+			&-block
+				margin-bottom: 38px
+				box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.25)
+				&-title
+					background-color: transparent
+					padding: 0
+					left: 0
+					top: -20px
+					font-family: $mcyrl900
+
+
+.contacts
+	&-info
+		height: 411px
+		&-link
+			span
+				font-size: 24px
+				transition: $transition
+a.contacts-info-link
+	&:hover
+		span
+			color: $blue
+
+
+.foot-link
+	transition: $transition
+	&:hover
+		color: $red
+

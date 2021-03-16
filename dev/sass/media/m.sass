@@ -11,6 +11,7 @@
 	position: fixed
 	top: 0
 	z-index: 1000
+	transition: $transition
 	&-burger
 		display: flex
 		align-items: center
@@ -76,6 +77,13 @@
 				&-list
 					transform: none
 
+
+.title
+	margin-bottom: 16px
+	font-size: 18px
+	text-transform: uppercase
+	font-family: $mcyrl900
+	text-align: center
 .button
 	+wh(142px,30px)
 	+bdrs(18px)
@@ -88,7 +96,8 @@
 	&-transparent
 		border-color: $blue
 
-
+.block
+	padding-top: 38px
 
 main
 	margin-top: 82px
@@ -96,15 +105,17 @@ main
 .banner
 	height: 460px
 	background-image: url("img/banner-bgc.jpg")
+	background-repeat: no-repeat
+	-webkit-background-size: cover
+	background-size: cover
 	padding-top: 71px
 	&-title
 		margin-bottom: 52px
 		font-size: 38px
-		text-transform: uppercase
 		line-height: .95
+		text-align: left
 		letter-spacing: 0.15em
 		color: $white
-		font-family: $mcyrl900
 	&-desc
 		margin-bottom: 47px
 		color: $white
@@ -116,3 +127,336 @@ main
 			&:first-child
 				margin-right: 10px
 
+
+.about
+	padding-bottom: 55px
+	&-logo
+		img
+			margin-bottom: 28px
+	&-text
+		font-family: $mcyrl500
+		line-height: 1.7
+	&-img
+		margin-top: 22px
+		margin-bottom: 24px
+	&-call
+		flex-direction: column
+		align-items: center
+		&-link
+			margin-top: 43px
+			order: 2
+			a
+				display: flex
+				align-items: center
+			img
+				margin-right: 10px
+			span
+				text-transform: uppercase
+				letter-spacing: .2em
+				text-decoration: underline
+
+
+.info
+	padding: 39px 0
+	box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.08)
+	.bricks
+		justify-content: space-between
+	&-unit
+		text-align: center
+		&:first-child,&:nth-child(2)
+			margin-bottom: 30px
+	&-title
+		line-height: 49px
+		strong
+			font-size: 24px
+			margin-right: 10px
+			font-family: $mcyrl900
+		span
+			font-family: $mcyrl500
+			text-transform: uppercase
+	&-desc
+		font-family: $mcyrl500
+		line-height: 34px
+
+
+.help
+	font-family: $mcyrl500
+	&-subtitle
+		margin-bottom: 20px
+		font-family: $mcyrl900
+		font-size: 16px
+		text-align: center
+	&-desc
+		text-align: center
+		line-height: 1.7
+	&-map
+		padding-top: 20px
+	&-item
+		margin-top: 20px
+		&-title
+			display: flex
+			align-items: center
+			font-family: $mcyrl900
+			&:before
+				+af
+				+wh(8px,40px)
+				margin-right: 50px
+				background-color: $blue
+		&-text
+			padding-left: 20px
+			padding-top: 20px
+		img
+			display: none
+
+
+.recent
+	&-info
+		display: none
+	&-block
+		margin-bottom: 20px
+		height: 250px
+		position: relative
+		&-inner
+			+wh(100%)
+			padding: 30px 10px
+			display: flex
+			flex-direction: column
+			color: $white
+			position: absolute
+		&-price
+			margin-bottom: auto
+			font-size: 24px
+			font-family: $mcyrl900
+			text-align: right
+		&-title
+			margin-bottom: 7px
+			font-family: $mcyrl900
+			font-size: 18px
+		&-desc
+			font-family: $mcyrl500
+		&-img
+			width: 100%
+			height: 100%
+			img
+				+wh(100%)
+				object-fit: cover
+
+
+.cases
+	&-bgc
+		display: none
+	&-block
+		&-title
+			margin-bottom: 16px
+			width: 288px
+			font-family: $mcyrl900
+			font-size: 18px
+		&-desc
+			font-family: $mcyrl500
+			line-height: 24px
+			letter-spacing: -.01em
+	&-unit
+		margin-bottom: 50px
+		&-title
+			display: flex
+			align-items: center
+			&-img
+				+wh(56px)
+				+dfc
+				+bdrs(100%)
+				margin-right: 22px
+				box-shadow: 0 4px 4px rgba(0, 0, 0, 0.14)
+				img
+					width: 32px
+			span
+				width: 185px
+				font-size: 18px
+				font-family: $mcyrl900
+		&-text
+			margin-top: 12px
+			font-family: $mcyrl500
+			line-height: 24px
+			letter-spacing: -.01em
+
+
+.values
+	&-block
+		+dfc
+		padding: 27px 10px
+		margin-bottom: 20px
+		flex-direction: column
+		border-radius: 14px 14px 0 0
+		border-top: 14px solid $blue
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.14)
+		text-align: left
+		&-title
+			margin-bottom: 24px
+			font-family: $mcyrl900
+			font-size: 18px
+			line-height: 24px
+		&-text
+			font-family: $mcyrl500
+			line-height: 24px
+
+
+.vulcan
+	&-form
+		.bricks
+			justify-content: space-between
+			align-items: flex-start
+		.form
+			&-block
+				height: 76px
+				margin-bottom: 18px
+				box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12)
+				position: relative
+				&-title
+					padding: 5px 10px
+					background-color: $white
+					position: absolute
+					top: -13px
+					left: 18px
+					z-index: 102
+					span
+						color: $red
+				&-input
+					+wh(100%)
+					padding: 0 20px
+					border: 1px solid $gray-text
+					font-size: 18px
+					font-family: $mcyrl500
+				&-textarea
+					height: 171px
+					textarea
+						padding: 20px
+				&-select
+					position: relative
+					overflow: hidden
+					transition: $transition
+					.select
+						&-head
+							+wh(100%,76px)
+							display: flex
+							align-items: center
+							justify-content: space-between
+							position: relative
+							z-index: 101
+							img
+								transition: $transition
+						&-body
+							+wh(calc(100% + 2px),228px)
+							overflow: auto
+							border: 1px solid $gray-text
+							position: absolute
+							left: -1px
+							right: -1px
+							top: 76px
+							z-index: 110
+						&-option
+							+wh(calc(100% - 2px),50px)
+							padding: 0 20px
+							background-color: $white
+							text-align: left
+					&.active
+						height: 303px
+						.select
+							&-head
+								img
+									transform: rotate(180deg)
+
+
+.ways
+	.bricks
+		justify-content: space-between
+	&-unit
+		padding: 50px 20px
+		display: flex
+		align-items: flex-start
+		flex-direction: column
+		color: $white
+		&-blue
+			margin-bottom: 20px
+			background: linear-gradient(135deg,#61AAFF,#0358BD)
+		&-gray
+			background-color: $gray
+			background-image: url('img/ways-bgc-1.svg')
+			background-repeat: no-repeat
+			background-position: 112% top
+		.button
+			margin: 0 auto
+	&-price
+		font-family: $mcyrl900
+		font-size: 36px
+	&-details,&-subtitle
+		font-family: $mcyrl700
+	&-details
+		margin-bottom: 50px
+		font-size: 12px
+	&-subtitle
+		margin-bottom: 20px
+		font-size: 18px
+		line-height: 24px
+	&-desc
+		margin-bottom: 50px
+		font-family: $mcyrl500
+		line-height: 24px
+
+
+.contacts
+	.bricks
+		justify-content: space-between
+	&-map
+		+wh(100%,174px)
+		margin-bottom: 28px
+		iframe
+			+wh(100%)
+			border: none
+	&-info
+		height: 222px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		&-block
+			padding-left: 40px
+			display: flex
+			align-items: center
+			&:first-child
+				.contacts-info-icon
+					img
+						width: 22px
+			&:last-child
+				margin-bottom: 0
+				.contacts-info-icon
+					img
+						width: 20px
+		&-icon
+			+dfc
+			width: 32px
+			margin-right: 42px
+			img
+				width: 32px
+		&-link
+			span
+				display: block
+			span:first-child
+			span:last-child
+
+
+.foot
+	font-family: $mcyrl500
+	padding-top: 88px
+	padding-bottom: 34px
+	&-copy
+		+dfc
+		margin-bottom: 26px
+		line-height: 25px
+		&-inner
+			span
+				display: block
+	&-links
+		display: flex
+		justify-content: space-between
+	&-link
+		text-transform: uppercase
+		line-height: 14.4px
+		letter-spacing: .2em

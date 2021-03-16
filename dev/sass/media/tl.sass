@@ -30,10 +30,14 @@
 				text-transform: uppercase
 
 
-
-
 main
 	margin-top: 66px
+
+.title
+	margin-bottom: 57px
+	font-size: 36px
+.block
+	padding-top: 103px
 
 .banner
 	height: calc(646px - 66px)
@@ -44,3 +48,148 @@ main
 	&-desc
 		margin-bottom: 43px
 		max-width: 596px
+
+
+.about
+	&-logo
+		flex-direction: column
+		align-items: flex-start
+		img
+			margin-right: 0
+			margin-bottom: 38px
+			width: 372px
+	&-text
+		font-size: 18px
+	&-img
+		margin: 0 0 0 auto
+		width: 577px
+		img
+			margin: 0
+	&-call
+		margin-top: 104px
+
+
+.info
+	font-size: 20px
+	&-title
+		margin-bottom: -5px
+		strong
+			font-size: 36px
+
+
+.help
+	&-map
+		padding-top: 30px
+		.bricks
+			&:last-child
+				justify-content: flex-end
+	&-item
+		margin-right: 0
+		&:first-child
+			margin-right: 121px
+			img
+				top: 50px
+		&:nth-child(2)
+			img
+				transform: none
+				left: initial
+				right: -10%
+		&-title
+			margin-bottom: 40px
+			&:before
+				margin-right: 72px
+		&-text
+			padding: 0 20px
+
+
+.recent
+	&-info
+		padding: 0 18px 30px
+		margin: 0
+		width: 100%
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.14)
+		&:first-child
+			height: 361px
+			margin-bottom: 19px
+		&:last-child
+			height: 266px
+			color: $white
+			background-color: #C4C4C4
+		&-cont
+			flex-direction: column
+		&-title
+			margin-top: auto
+		&-desc
+			width: 250px
+			line-height: 24px
+		&-price
+			margin-top: auto
+	&-block
+		height: 646px
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.14)
+		&-inner
+			padding: 56px 19px 106px
+		&-title
+			margin-bottom: 12px
+		&-desc
+			line-height: 24px
+
+
+.cases
+	overflow: hidden
+	&-bgc
+		transform: translateX(10%)
+	&-block
+		&-title
+			line-height: 24px
+	&-units
+		padding-top: 83px
+	&-unit
+		width: 287px
+		&-title
+			line-height: 24px
+			&-img
+				+wh(76px)
+				flex-basis: 76px
+				img
+					width: 32px
+
+
+.values
+	&-block
+		align-items: flex-start
+		padding: 27px 45px 30px
+
+
+.ways
+	&-unit
+		padding: 79px 87px
+		&-blue
+			margin-bottom: 0
+	&-price
+		margin-bottom: 10px
+	&-details
+		margin-bottom: 90px
+	&-subtitle
+		margin-bottom: 40px
+	&-desc
+		margin-bottom: 97px
+
+
+.contacts
+	&-info
+		height: 360px
+		padding: 28px 0
+		&-block
+			font-size: 18px
+			span:first-child
+				margin-bottom: 5px
+
+
+.foot
+	padding: 100px 0 45px
+	&-copy
+		justify-content: flex-start
+		&-inner
+			display: flex
+			align-items: center

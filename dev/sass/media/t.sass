@@ -21,10 +21,15 @@
 				margin: 0
 
 
+.title
+	margin-bottom: 42px
+	font-size: 24px
 .button
-	&-blue
-	&-transparent
+	+wh(176px,42px)
+	+bdrs(21px)
 
+.block
+	padding-top: 80px
 main
 	margin-top: 60px
 
@@ -40,4 +45,170 @@ main
 		margin-bottom: 24px
 		font-size: 20px
 		line-height: 1.7
-	&-buttons
+
+
+.about
+	padding-bottom: 67px
+	&-logo
+		display: flex
+		align-items: center
+		img
+			margin-right: 72px
+			margin-bottom: 0
+			width: 418px
+			display: block
+	&-text
+		font-size: 16px
+	&-img
+		margin-top: 41px
+		margin-bottom: 28px
+		img
+			width: 100%
+	&-call
+		flex-direction: row
+		flex-wrap: nowrap
+		&-link
+			margin-top: 0
+			order: 0
+			display: flex
+			justify-content: center
+
+
+.info
+	&-unit
+		width: initial
+		&:nth-child(n)
+			margin: 0
+
+
+.help
+	&-subtitle
+		margin: 0 auto 16px
+		width: 288px
+		font-size: 18px
+		line-height: 24px
+	&-desc
+		margin: 0 auto
+		width: 491px
+		line-height: 24px
+	&-map
+		padding-top: 0
+	&-item
+		margin-top: 50px
+		margin-right: auto
+		position: relative
+		&:first-child
+			img
+				right: -40%
+				top: 0
+		&:nth-child(2)
+			img
+				transform: rotate(35deg)
+				left: -25%
+				bottom: -20%
+		img
+			display: block
+			position: absolute
+
+
+.recent
+	.bricks
+		justify-content: space-between
+	&-info
+		margin-bottom: 20px
+		display: flex
+		flex-direction: column
+		&-title
+			margin-bottom: 7px
+			font-family: $mcyrl900
+			font-size: 18px
+		&-desc
+			margin-bottom: 10px
+			font-family: $mcyrl500
+		&-price
+			margin-top: auto
+			font-size: 24px
+			font-family: $mcyrl900
+			text-align: right
+	&-block
+		margin-bottom: 0
+
+
+.cases
+	position: relative
+	&-bgc
+		display: block
+		opacity: .05
+		position: absolute
+		right: 0
+		top: 50px
+	&-block
+		&-title
+			width: 288px
+		&-desc
+			width: 592px
+	&-units
+		padding-top: 50px
+		justify-content: space-between
+	&-unit
+		width: 30%
+		margin-bottom: 0
+		&-title
+			&-img
+				+wh(35px)
+				flex: 0 0 35px
+				img
+					width: 25px
+
+
+.values
+	.bricks
+		justify-content: space-between
+	&-blue-insert
+		+wh(20px,14px)
+		+bdrs(7px)
+		background-color: $blue
+	&-block
+		height: 100%
+		&-text
+			margin-bottom: auto
+
+
+.vulcan
+	&-form
+		.form
+			&-block
+				&-title
+					font-size: 18px
+
+
+.ways
+	&-unit
+		&-blue
+			margin-bottom: 0
+
+
+.contacts
+	&-map
+		height: 100%
+		&-cont
+			order: 2
+	&-info
+		height: 285px
+		&-icon
+			margin-right: 26px
+		&-link
+			span
+			span:first-child
+			span:last-child
+
+
+.foot
+	.bricks
+		align-items: center
+	&-copy
+		margin-bottom: 0
+	&-links
+		justify-content: flex-end
+	&-link
+		margin-left: 40px

@@ -66,7 +66,7 @@ class Front extends _front{
   }
 
   textAnimation(){
-    let blocks = document.querySelectorAll('section');
+    let blocks = document.querySelectorAll('.animation-block');
     if (!blocks.length) return;
     for (let block of blocks){
       if (window.pageYOffset + window.innerHeight - 150 >= block.offsetTop){

@@ -442,6 +442,62 @@ main
 			span:last-child
 
 
+.projects
+	.bricks
+		position: relative
+		justify-content: flex-end
+	.mt19
+		margin-top: 19px
+	&-subtitle
+		font-family: $mcyrl500
+		text-align: center
+	&-year
+		text-align: center
+	&-block
+		height: 200px
+		position: relative
+		background-color: $gray
+		overflow: hidden
+		&-row
+			margin-top: 19px
+	&-info
+		padding-left: 20px
+		padding-right: 10px
+		color: $white
+		position: absolute
+		bottom: 5px
+		z-index: 10
+		transition: $transition
+		transform: translateY(calc(100% - 40px))
+		&-title
+			font-family: $mcyrl900
+			span
+				display: block
+		&-desc
+			margin-top: 20px
+			font-family: $mcyrl500
+			font-size: 12px
+	&-img
+		+wh(100%)
+		img
+			+wh(100%)
+			display: block
+			object-fit: cover
+			transition: $transition
+	&-t30
+		margin-top: 19px
+		&:first-child
+			margin-top: 0
+	&-block
+		&:hover
+			.projects
+				&-info
+					transform: none
+				&-img
+					img
+						opacity: .5
+
+
 .foot
 	font-family: $mcyrl500
 	padding-top: 88px

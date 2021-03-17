@@ -34,22 +34,12 @@ $desktop-large-grid: 1920
 @media screen and (min-width: $mobile-grid#{$unit})
 	+grid(6,'.m',10,45)
 @media screen and (min-width: $mobile-large-grid#{$unit})
-	$colCoeff: 45
-	$depCoeff: 10
-	+grid(6,'.ml',$depCoeff,$colCoeff)
+	+grid(6,'.ml',10,45)
 @media screen and (min-width: $tablet-grid#{$unit})
-	$colCoeff: 79
-	$depCoeff: 19
-	+grid(8,'.t',$depCoeff,$colCoeff)
+	+grid(8,'.t',19,79)
 @media screen and (min-width: $tablet-large-grid#{$unit})
-	$colCoeff: 83
-	$depCoeff: 19
-	+grid(10,'.tl',$depCoeff,$colCoeff)
+	+grid(10,'.tl',19,83)
 @media screen and (min-width: $desktop-grid#{$unit})
-	$colCoeff: 79
-	$depCoeff: 20
-	+grid(12,'.d',$depCoeff,$colCoeff)
+	+grid(12,'.d',20,79)
 @media screen and (min-width: $desktop-large-grid#{$unit})
-	$colCoeff: 79
-	$depCoeff: 20
-	+grid(12,'.dl',$depCoeff,$colCoeff)
+	+grid(12,'.dl',20,79)

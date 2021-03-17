@@ -4,7 +4,7 @@ append vars
 		page_title= 'Main'
 block content
 	main
-		section.banner
+		section.banner.animation-block
 			.section
 				.twd7.d9.banner-inner
 					h1.title.banner-title.animation Invest in real estate
@@ -12,7 +12,7 @@ block content
 					.banner-buttons
 						button.button.button-blue INVEST WITH US
 						button.button.button-transparent SELL MY PROPERTY
-		section.about.block
+		section.about.block.animation-block
 			.section
 				.bricks
 					.m6
@@ -31,7 +31,7 @@ block content
 									+img('phone.svg')
 									span Request a call
 							p.t5.tlwd6.about-text.animation In 2017 Vulcan Investments Real Estate acquired 20 properties, currently valued at over 10 million, in Monmouth & Middlesex counties alone. We are constantly searching the market for additional properties to add to our portfolio, and have a continuous stream of investors driving us to find new ways to deploy capital.
-		section.info
+		section.info.animation-block
 			.section
 				.bricks
 					-for (let i = 0; i < 4; i++)
@@ -40,7 +40,7 @@ block content
 								strong 2.34$
 								span million
 							p.info-desc Investment in 2020
-		section.help.block
+		section.help.block.animation-block
 			.section
 				h2.title.help-title.animation helps investors
 				.help-subtitle.animation Cadre helps investors achieve their diversification goals
@@ -63,7 +63,7 @@ block content
 						.twd3.tlwd3.help-item.animation
 							h6.help-item-title Potential for Liquidity
 							p.help-item-text We offer a groundbreaking secondary market, providing investors with the potential to exit eligible assets during our secondary windows. This is in marked contrast to traditional real estate investment funds that lock up your capital for years
-		section.recent.block
+		section.recent.block.animation-block
 			.section
 				h2.title.recent-title.animation Our Recent Transactions
 				.bricks
@@ -93,7 +93,7 @@ block content
 								p.recent-block-desc.animation Vulcan Investments is always seeking to acquire new properties and deliver outstanding returns.
 							.recent-block-img
 								+img('recent-bgc-1.jpg')
-		section.cases.block
+		section.cases.block.animation-block
 			.section
 				h2.title.cases-title.animation Our cases
 				+img('FirstAidKit.svg').cases-bgc
@@ -124,7 +124,7 @@ block content
 								+img('cases-icon-3.svg')
 							span Cash Flow Generation
 						p.cases-unit-text Real estate is designed to generate stable, predictable cash flow, through booms and busts
-		section.values.block
+		section.values.block.animation-block
 			.section
 				h2.title.animation Values
 				.bricks
@@ -142,7 +142,7 @@ block content
 						.values-block
 							h5.values-block-title Transparency
 							p.values-block-text We earn the trust of investors every day through sound reporting and frequent project updates
-		section.vulcan.block
+		section.vulcan.block.animation-block
 			.section
 				h2.title.animation Contact Vulcan
 				form(name='contactVulcan').vulcan-form
@@ -179,7 +179,7 @@ block content
 							textarea.form-block-input
 						.m6
 							button.button.button-blue Submit
-		section.ways.block
+		section.ways.block.animation-block
 			.section
 				h2.title.animation two ways to invest with us
 				.bricks
@@ -195,33 +195,7 @@ block content
 						.ways-subtitle.animation Deal-by-Deal Investing: Select the right investment for you
 						.ways-desc.animation Get direct access to individual institutional-quality commercial real estate assets with greater transparency, lower fees, and a groundbreaking secondary market
 						button.button.button-blue Learn more
-		section.contacts.block
-			.section
-				h2.title.animation vulcan investments address
-				.bricks
-					.m6.twd5.tlwd6.dwd7.contacts-map-cont
-						.contacts-map
-							iframe(src="" allowfullscreen="" loading="lazy")
-					.m6.twd3.tlwd4.dwd5
-						.contacts-info
-							.contacts-info-block.animation
-								.contacts-info-icon
-									+img('phone.svg')
-								a(href='tel:7327403896').contacts-info-link
-									span Give Us A Call
-									span (732) 740 - 3896
-							.contacts-info-block.animation
-								.contacts-info-icon
-									+img('Chats.svg')
-								a(href='mailto:igor@vulcanent.com').contacts-info-link
-									span Send Us An Email
-									span igor@vulcanent.com
-							.contacts-info-block.animation
-								.contacts-info-icon
-									+img('address.svg')
-								.contacts-info-link
-									span 200 Craig Road Suite 220,
-									span Manalapan NJ 07726
+		include parts/contacts
 
 
 
